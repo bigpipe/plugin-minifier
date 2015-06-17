@@ -3,6 +3,13 @@
 var debug = require('diagnostics')('bigpipe-minifier')
   , Minifier = require('./minifier');
 
+/**
+ * Check if a valid tool was provided and is available.
+ *
+ * @param {Mixed} tool Minifier.
+ * @return {Boolean} Result of validated tool.
+ * @api private
+ */
 function valid(tool) {
   return 'function' === typeof tool || 'object' === typeof tool;
 }
@@ -12,9 +19,8 @@ function valid(tool) {
 //
 exports.name = 'minifier';
 
-
 //
-//
+// Adds minification support the compiler on file registration.
 //
 exports.server = function server(bigpipe, options) {
   options = options('minifier', {});
