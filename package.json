@@ -1,0 +1,35 @@
+{
+  "name": "bigpipe-minifier",
+  "version": "0.0.0",
+  "description": "Minification plugin for the compiler",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bigpipe/plugin-minifier.git"
+  },
+  "keywords": [
+    "Minify",
+    "BigPipe",
+    "compiler",
+    "css",
+    "js"
+  ],
+  "author": "Martijn Swaagman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bigpipe/plugin-minifier/issues"
+  },
+  "homepage": "https://github.com/bigpipe/plugin-minifier",
+  "dependencies": {
+    "diagnostics": "0.0.x"
+  },
+  "devDependencies": {
+    "assume": "1.1.x",
+    "istanbul": "0.3.x",
+    "mocha": "2.2.x",
+    "pre-commit": "1.0.x"
+  }
+}
