@@ -24,13 +24,13 @@
   },
   "homepage": "https://github.com/bigpipe/plugin-minifier",
   "dependencies": {
-    "diagnostics": "0.0.x"
+    "diagnostics": "~1.0.1"
   },
   "devDependencies": {
-    "assume": "1.1.x",
+    "assume": "~1.2.5",
     "bigpipe": "~0.9.9",
-    "istanbul": "0.3.x",
-    "mocha": "2.2.x",
-    "pre-commit": "1.0.x"
+    "istanbul": "~0.3.0",
+    "mocha": "~2.2.0",
+    "pre-commit": "~1.0.0"
   }
 }
