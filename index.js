@@ -25,8 +25,8 @@ exports.name = 'minifier';
 exports.server = function server(bigpipe, options) {
   options = options('minifier', {});
 
-  var css = valid(options.css.tool)
-    , js = valid(options.js.tool)
+  var css = options.css ? valid(options.css.tool) : false
+    , js = options.js ? valid(options.js.tool) : false
     , minify;
 
   minify = new Minifier(options);
@@ -40,8 +40,8 @@ exports.server = function server(bigpipe, options) {
     //
     // Only process files that have registered minifiers.
     //
-    if (!file.is('js') && !file.is('css')) return;
-    if ((!js && file.is('js')) || (!css && file.is('css'))) return;
+    if (!file.is('js') && !file.is('css')) return next();
+    if ((!js && file.is('js')) || (!css && file.is('css'))) return next();
 
     //
     // Call the registered minification tool and store the minified content
